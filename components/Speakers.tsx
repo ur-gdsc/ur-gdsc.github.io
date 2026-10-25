@@ -6,24 +6,25 @@ import { ImageWithFallback } from './ImageWithFallback';
 const Speakers: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState('');
 
+    const query = searchTerm.trim().toLowerCase();
     const filteredSpeakers = SPEAKERS.filter(speaker =>
-        speaker.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        speaker.company?.toLowerCase().includes(searchTerm.toLowerCase())
+        speaker.name.toLowerCase().includes(query) ||
+        speaker.company?.toLowerCase().includes(query)
     );
 
     return (
-        <section id="speakers" className="py-32 bg-paper border-b border-border">
-            <div className="container max-w-[1400px] mx-auto px-6">
+        <section id="speakers" className="site-section bg-paper border-b border-border">
+            <div className="site-container">
 
                 {/* Upcoming Speakers */}
                 {UPCOMING_SPEAKERS.length > 0 && (
                 <div className="mb-32">
                     <div className="mb-16">
-                        <span className="text-xs font-medium text-google-blue uppercase tracking-widest mb-4 block">Coming Soon</span>
-                        <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">
+
+                        <h2 className="section-heading">
                             Upcoming Speakers
                         </h2>
-                        <p className="text-gray-400 max-w-xl leading-relaxed">
+                        <p className="section-description">
                             Industry leaders and academics joining us this semester to share their insights on technology, AI, and the future.
                         </p>
                     </div>
@@ -62,7 +63,7 @@ const Speakers: React.FC = () => {
                                                 className="h-7 w-auto opacity-70"
                                                 onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                                             />
-                                            <span className="text-xs text-gray-500">{speaker.affiliation}</span>
+                                            <span className="text-xs text-muted">{speaker.affiliation}</span>
                                         </div>
                                         <span className="inline-flex items-center gap-2 text-xs font-medium text-white bg-white/10 px-4 py-1.5 rounded-full">
                                             {speaker.month}
@@ -76,118 +77,72 @@ const Speakers: React.FC = () => {
                 )}
 
                 {/* Past Speakers Header */}
-                <div className="grid md:grid-cols-[1fr_auto] gap-12 mb-10 items-end">
+                <div className="directory-section-header">
                     <div>
-                        <span className="text-xs font-medium text-gray-500 uppercase tracking-widest mb-4 block">Past Guests</span>
-                        <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">
+
+                        <h2 className="section-heading">
                             Featured Speakers
                         </h2>
-                        <p className="text-gray-400 max-w-xl leading-relaxed">
+                        <p className="section-description">
                             Industry pioneers, innovators, and thought leaders who have visited Rochester to connect with students.
                         </p>
                     </div>
                     <div className="relative group">
                         <input
-                            type="text"
+                            type="search"
+                            aria-label="Search speakers by name or company"
+                            aria-controls="speaker-results"
                             placeholder="Search speakers..."
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
-                            className="bg-transparent border-b border-gray-700 py-3 pl-0 pr-8 text-white focus:outline-none focus:border-white transition-all w-64 text-sm placeholder:text-gray-600"
+                            className="speaker-search"
                         />
-                        <Search className="absolute right-0 top-1/2 transform -translate-y-1/2 text-gray-600 w-4 h-4" />
+                        <Search className="absolute right-4 top-1/2 -translate-y-1/2 text-muted w-4 h-4 pointer-events-none" />
                     </div>
                 </div>
 
-                <div className="mb-20 border-y border-border py-8 md:py-10">
-                    <div className="grid lg:grid-cols-[minmax(0,1fr)_18rem] gap-8 lg:gap-12 items-start">
-                        <div className="border-l-2 border-white pl-6 md:pl-8">
-                            <span className="text-xs font-medium text-gray-500 uppercase tracking-[0.22em] mb-3 block">
-                                A Note on the Roster
-                            </span>
-                            <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4 leading-tight max-w-4xl">
+                <div id="speaker-results" className="speaker-grid">
+                    {filteredSpeakers.map(speaker => (
+                        <article key={speaker.id} className="speaker-card">
+                            <div className="speaker-photo">
+                                <ImageWithFallback src={speaker.image} alt={speaker.name} className="w-full h-full object-cover" />
+                            </div>
+                            <div className="speaker-details">
+                            {speaker.company && <div className="speaker-affiliation">
+                                {speaker.companyLogo && <img src={speaker.companyLogo} alt="" className="w-5 h-5 object-contain" onError={event => { event.currentTarget.style.display = 'none'; }} />}
+                                <span>{speaker.company}</span>
+                            </div>}
+                            <h3>{speaker.name}</h3>
+                            <p className="speaker-bio">{speaker.role}</p>
+                            </div>
+                        </article>
+                    ))}
+                </div>
+                <div role="status" aria-live="polite">
+                    {query && (filteredSpeakers.length ? <p className="text-sm text-muted mt-6">{filteredSpeakers.length} {filteredSpeakers.length === 1 ? 'speaker' : 'speakers'} found.</p> : <div className="search-empty">
+                        <h3 className="text-xl text-white mb-2">No speakers found</h3>
+                        <p className="text-gray-400 mb-5">Try another name or company.</p>
+                        <button className="secondary-link" onClick={() => setSearchTerm('')}>Clear search</button>
+                    </div>)}
+                </div>
+                <div className="roster-note">
+                    <div className="roster-note-grid">
+                        <div className="">
+                            <h3 className="text-lg font-medium text-white mb-3 leading-relaxed max-w-4xl">
                                 This page shows many of our public speakers, but not every conversation is listed here.
                             </h3>
-                            <p className="text-gray-400 leading-relaxed max-w-3xl">
+                            <p className="text-sm text-gray-400 leading-relaxed max-w-3xl">
                                 GDSC Rochester has also hosted select invite-only fireside chats with renowned founders, technologists, and industry figures behind companies you recognize and products you use, including multi-trillion-dollar technology companies. Some conversations were intentionally small-room, so we cannot always publish every name.
                             </p>
                         </div>
                         <div className="lg:border-l border-border lg:pl-8">
-                            <div className="text-xs text-gray-500 uppercase tracking-[0.22em] mb-3">
-                                Also Hosted
-                            </div>
-                            <div className="text-lg md:text-xl font-semibold text-white leading-snug">
+                            <div className="text-base font-medium text-white leading-snug">
                                 Private sessions with founders and technologists whose work is already in your pocket.
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Past Speakers Grid */}
-                {(() => {
-                    const leftover = filteredSpeakers.length % 4;
-                    const fullCount = filteredSpeakers.length - leftover;
-                    const fullRows = filteredSpeakers.slice(0, fullCount);
-                    const remainder = filteredSpeakers.slice(fullCount);
-
-                    const renderCard = (speaker: typeof filteredSpeakers[number]) => (
-                        <div key={speaker.id} className="bg-paper p-8 group hover:bg-surface transition-colors relative overflow-hidden h-full flex flex-col">
-                            <div className="mb-6 overflow-hidden transition-all duration-700 ease-in-out">
-                                <div className="aspect-[3/4] w-full relative">
-                                    <ImageWithFallback
-                                        src={speaker.image}
-                                        alt={speaker.name}
-                                        className="w-full h-full object-cover"
-                                    />
-                                    {speaker.companyLogo && (
-                                        <div className="absolute top-4 right-4 flex items-center gap-2.5 bg-white shadow-xl ring-1 ring-black/10 rounded-full pl-2 pr-4 py-2 transition-transform duration-300 group-hover:scale-105">
-                                            <div className="w-11 h-11 rounded-full bg-white flex items-center justify-center overflow-hidden">
-                                                <img
-                                                    src={speaker.companyLogo}
-                                                    alt={speaker.company}
-                                                    className="w-9 h-9 object-contain"
-                                                    onError={(e) => { ((e.target as HTMLImageElement).parentElement?.parentElement as HTMLElement).style.display = 'none'; }}
-                                                />
-                                            </div>
-                                            <span className="text-sm font-semibold tracking-wide text-black whitespace-nowrap">
-                                                {speaker.company}
-                                            </span>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4 className="font-semibold text-2xl text-white mb-3 group-hover:translate-x-2 transition-transform duration-300">
-                                    {speaker.name}
-                                </h4>
-                                <p className="text-sm text-gray-500 leading-relaxed border-t border-border pt-4">
-                                    {speaker.role}
-                                </p>
-                            </div>
-                        </div>
-                    );
-
-                    return (
-                        <>
-                            {fullRows.length > 0 && (
-                                <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border ${remainder.length > 0 ? 'border-b-0' : ''}`}>
-                                    {fullRows.map(renderCard)}
-                                </div>
-                            )}
-                            {remainder.length > 0 && (
-                                <div className="flex justify-center">
-                                    <div className="flex flex-col md:flex-row gap-px bg-border border border-border border-t-0">
-                                        {remainder.map((speaker) => (
-                                            <div key={speaker.id} className="md:w-[25vw] md:max-w-[350px]">
-                                                {renderCard(speaker)}
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
-                        </>
-                    );
-                })()}
             </div>
         </section>
     );
