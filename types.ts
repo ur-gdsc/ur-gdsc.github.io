@@ -12,6 +12,7 @@ export interface Leader {
     name: string;
     role: string; // President, Advisor, Technical Lead, etc.
     image: string;
+    year?: string; // Academic year, e.g. "2025-2026"
 }
 
 export interface Event {

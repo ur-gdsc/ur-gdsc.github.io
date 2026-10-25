@@ -2,6 +2,14 @@ import { Speaker, Leader, Event, Alumni, UpcomingSpeaker } from './types';
 
 export const SPEAKERS: Speaker[] = [
     {
+        id: '12',
+        name: 'Jeff Nguyen',
+        role: 'BobaTalks Founder & Tech Recruiter: A tech industry recruiter (formerly with Google and Amazon) and the founder of BobaTalks, a non-profit and mentorship community supporting early-career students.',
+        image: '/jeff-nguyen.jpg',
+        company: 'BobaTalks',
+        companyLogo: 'https://www.google.com/s2/favicons?domain=bobatalks.com&sz=128'
+    },
+    {
         id: '3',
         name: 'Phoebe Gates',
         role: 'Co‑founder of Phia, an AI‑driven shopping agent launched from her Stanford dorm room with activist Sophia Kianni; daughter of Bill & Melinda Gates.',
@@ -92,19 +100,32 @@ export const SPEAKERS: Speaker[] = [
 
 export const UPCOMING_SPEAKERS: UpcomingSpeaker[] = [];
 
+export const CURRENT_LEADERS: Leader[] = [
+    { id: 'curr-adv1', name: 'Eric Pope', role: 'Advisor', image: '/eric.jpeg', year: '2026-2027' },
+    { id: 'curr-pres1', name: 'Deniz Deryaoglu', role: 'President', image: '/deniz2.jpg', year: '2026-2027' },
+    { id: 'curr-vp1', name: 'Earvin Chen', role: 'Vice President', image: '/earvin2.jpg', year: '2026-2027' },
+    { id: 'curr-evt1', name: 'Serena Chen', role: 'Events Manager', image: '/serena2.jpg', year: '2026-2027' },
+    { id: 'curr-sec1', name: 'Danica Kim', role: 'Secretary', image: '/danica2.jpg', year: '2026-2027' },
+    { id: 'curr-bus1', name: 'Minh Pham', role: 'Business Manager', image: '/minh2.png', year: '2026-2027' },
+    { id: 'curr-mkt1', name: 'Hailey Wong-Budiman', role: 'Marketing Lead', image: '/hailey2.png', year: '2026-2027' },
+    { id: 'curr-tech1', name: 'Henry Shen', role: 'Tech Lead', image: '/henry.jpg', year: '2026-2027' },
+    { id: 'curr-tech2', name: 'Anh Nguyen', role: 'Tech Lead', image: '/anh.jpg', year: '2026-2027' },
+    { id: 'curr-tech3', name: 'Jeff Munkondya', role: 'Tech Lead', image: '/jeff.png', year: '2026-2027' },
+];
+
 export const LEADERS: Leader[] = [
-    { id: 'adv1', name: 'Eric Pope', role: 'Advisor', image: '/eric.jpeg' },
-    { id: 'pres1', name: 'Hailey Wong-Budiman', role: 'President', image: '/hailey.png' },
-    { id: 'vp1', name: 'Krish Jain', role: 'Vice President', image: '/krish.jpg' },
-    { id: 'sec1', name: 'Deniz Deryaoglu', role: 'Secretary', image: '/deniz.jpg' },
-    { id: 'bus1', name: 'Minh Pham', role: 'Business Manager', image: '/minh.jpeg' },
-    { id: 'evt1', name: 'Lucy Jijo', role: 'Events Manager', image: '/lucy.jpeg' },
-    { id: 'tech1', name: 'Rory Brennan-Jones', role: 'Technical Lead', image: '/rory.jpeg' },
-    { id: 'tech2', name: 'Danica Kim', role: 'Technical Lead', image: '/danica.jpg' },
-    { id: 'mkt1', name: 'Xintong Lin', role: 'Marketing Lead', image: '/xintong.jpeg' },
-    { id: 'tech3', name: 'Abigail Briones', role: 'Technical Lead', image: '/abigail.jpg' },
-    { id: 'tech4', name: 'Serena Chen', role: 'Technical Lead', image: '/serena.jpeg' },
-    { id: 'tech5', name: 'Earvin', role: 'Technical Lead', image: '/earvin.jpg' },
+    { id: 'adv1', name: 'Eric Pope', role: 'Advisor', image: '/eric.jpeg', year: '2025-2026' },
+    { id: 'pres1', name: 'Hailey Wong-Budiman', role: 'President', image: '/hailey.png', year: '2025-2026' },
+    { id: 'vp1', name: 'Krish Jain', role: 'Vice President', image: '/krish.jpg', year: '2025-2026' },
+    { id: 'sec1', name: 'Deniz Deryaoglu', role: 'Secretary', image: '/deniz.jpg', year: '2025-2026' },
+    { id: 'bus1', name: 'Minh Pham', role: 'Business Manager', image: '/minh.jpeg', year: '2025-2026' },
+    { id: 'evt1', name: 'Lucy Jijo', role: 'Events Manager', image: '/lucy.jpeg', year: '2025-2026' },
+    { id: 'tech1', name: 'Rory Brennan-Jones', role: 'Technical Lead', image: '/rory.jpeg', year: '2025-2026' },
+    { id: 'tech2', name: 'Danica Kim', role: 'Technical Lead', image: '/danica.jpg', year: '2025-2026' },
+    { id: 'mkt1', name: 'Xintong Lin', role: 'Marketing Lead', image: '/xintong.jpeg', year: '2025-2026' },
+    { id: 'tech3', name: 'Abigail Briones', role: 'Technical Lead', image: '/abigail.jpg', year: '2025-2026' },
+    { id: 'tech4', name: 'Serena Chen', role: 'Technical Lead', image: '/serena.jpeg', year: '2025-2026' },
+    { id: 'tech5', name: 'Earvin', role: 'Technical Lead', image: '/earvin.jpg', year: '2025-2026' },
 ];
 
 export const EVENTS: Event[] = [

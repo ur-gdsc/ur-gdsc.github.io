@@ -156,7 +156,7 @@ const Speakers: React.FC = () => {
                                 </div>
                             </div>
 
-                            <div className="mt-auto">
+                            <div>
                                 <h4 className="font-semibold text-2xl text-white mb-3 group-hover:translate-x-2 transition-transform duration-300">
                                     {speaker.name}
                                 </h4>
