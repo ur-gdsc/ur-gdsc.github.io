@@ -19,25 +19,52 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout main website
         uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-site
+
+      - name: Checkout redesign
+        uses: actions/checkout@v4
+        with:
+          ref: design/rochester-community
+          path: redesign-site
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
+          cache-dependency-path: |
+            main-site/package-lock.json
+            redesign-site/package-lock.json
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install main dependencies
+        working-directory: main-site
+        run: npm ci
 
-      - name: Build site
-        run: npm run build
+      - name: Build main website at root
+        working-directory: main-site
+        run: npm run build -- --base=/ --outDir ../public-site
+
+      - name: Install redesign dependencies
+        working-directory: redesign-site
+        run: npm ci
+
+      - name: Build redesign under /redesign/
+        working-directory: redesign-site
+        run: npm run build -- --base=/redesign/ --outDir ../public-site/redesign
+
+      - name: Verify both entry points
+        run: |
+          test -s public-site/index.html
+          test -s public-site/redesign/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: public-site
 
   deploy:
     environment:
@@ -49,4 +76,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
