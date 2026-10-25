@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-25T21:23:03.762413+00:00",
+  "title": "Design System: GDSC Rochester",
+  "extensions": {
+    "colorMeta": {
+      "page": {
+        "role": "neutral",
+        "displayName": "Page",
+        "tonalRamp": [
+          "oklch(15% 0.0064 252.1)",
+          "oklch(26% 0.0134 252.1)",
+          "oklch(38% 0.0192 252.1)",
+          "oklch(49% 0.0192 252.1)",
+          "oklch(61% 0.0192 252.1)",
+          "oklch(72% 0.0192 252.1)",
+          "oklch(84% 0.0123 252.1)",
+          "oklch(95% 0.0038 252.1)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel",
+        "tonalRamp": [
+          "oklch(15% 0.0090 253.4)",
+          "oklch(26% 0.0189 253.4)",
+          "oklch(38% 0.0270 253.4)",
+          "oklch(49% 0.0270 253.4)",
+          "oklch(61% 0.0270 253.4)",
+          "oklch(72% 0.0270 253.4)",
+          "oklch(84% 0.0173 253.4)",
+          "oklch(95% 0.0054 253.4)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "tonalRamp": [
+          "oklch(15% 0.0110 252.1)",
+          "oklch(26% 0.0232 252.1)",
+          "oklch(38% 0.0331 252.1)",
+          "oklch(49% 0.0331 252.1)",
+          "oklch(61% 0.0331 252.1)",
+          "oklch(72% 0.0331 252.1)",
+          "oklch(84% 0.0212 252.1)",
+          "oklch(95% 0.0066 252.1)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0059 256.3)",
+          "oklch(26% 0.0124 256.3)",
+          "oklch(38% 0.0178 256.3)",
+          "oklch(49% 0.0178 256.3)",
+          "oklch(61% 0.0178 256.3)",
+          "oklch(72% 0.0178 256.3)",
+          "oklch(84% 0.0114 256.3)",
+          "oklch(95% 0.0036 256.3)"
+        ]
+      },
+      "link": {
+        "role": "primary",
+        "displayName": "Link",
+        "tonalRamp": [
+          "oklch(15% 0.0228 260.1)",
+          "oklch(26% 0.0480 260.1)",
+          "oklch(38% 0.0685 260.1)",
+          "oklch(49% 0.0685 260.1)",
+          "oklch(61% 0.0685 260.1)",
+          "oklch(72% 0.0685 260.1)",
+          "oklch(84% 0.0438 260.1)",
+          "oklch(95% 0.0137 260.1)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0015 258.3)",
+          "oklch(26% 0.0032 258.3)",
+          "oklch(38% 0.0046 258.3)",
+          "oklch(49% 0.0046 258.3)",
+          "oklch(61% 0.0046 258.3)",
+          "oklch(72% 0.0046 258.3)",
+          "oklch(84% 0.0029 258.3)",
+          "oklch(95% 0.0009 258.3)"
+        ]
+      },
+      "action": {
+        "role": "primary",
+        "displayName": "Action",
+        "tonalRamp": [
+          "oklch(15% 0.0193 259.0)",
+          "oklch(26% 0.0405 259.0)",
+          "oklch(38% 0.0579 259.0)",
+          "oklch(49% 0.0579 259.0)",
+          "oklch(61% 0.0579 259.0)",
+          "oklch(72% 0.0579 259.0)",
+          "oklch(84% 0.0371 259.0)",
+          "oklch(95% 0.0116 259.0)"
+        ]
+      },
+      "action-hover": {
+        "role": "primary",
+        "displayName": "Action Hover",
+        "tonalRamp": [
+          "oklch(15% 0.0118 258.9)",
+          "oklch(26% 0.0247 258.9)",
+          "oklch(38% 0.0353 258.9)",
+          "oklch(49% 0.0353 258.9)",
+          "oklch(61% 0.0353 258.9)",
+          "oklch(72% 0.0353 258.9)",
+          "oklch(84% 0.0226 258.9)",
+          "oklch(95% 0.0071 258.9)"
+        ]
+      },
+      "action-ink": {
+        "role": "neutral",
+        "displayName": "Action Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0149 256.9)",
+          "oklch(26% 0.0312 256.9)",
+          "oklch(38% 0.0446 256.9)",
+          "oklch(49% 0.0446 256.9)",
+          "oklch(61% 0.0446 256.9)",
+          "oklch(72% 0.0446 256.9)",
+          "oklch(84% 0.0285 256.9)",
+          "oklch(95% 0.0089 256.9)"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "Focus",
+        "tonalRamp": [
+          "oklch(15% 0.0179 260.6)",
+          "oklch(26% 0.0375 260.6)",
+          "oklch(38% 0.0536 260.6)",
+          "oklch(49% 0.0536 260.6)",
+          "oklch(61% 0.0536 260.6)",
+          "oklch(72% 0.0536 260.6)",
+          "oklch(84% 0.0343 260.6)",
+          "oklch(95% 0.0107 260.6)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Archivo chapter slogan",
+        "purpose": "White two-line slogan at weight 450, 90% stretch; 58px maximum, 48px mobile.",
+        "fontStretch": "90%"
+      },
+      "title": {
+        "displayName": "Archivo section title",
+        "purpose": "Section hierarchy at weight 400, 30px desktop and 28px mobile.",
+        "fontStretch": "90%"
+      },
+      "body": {
+        "displayName": "Source Sans 3 body",
+        "purpose": "16px base reading text and section descriptions."
+      },
+      "description": {
+        "displayName": "Hero description",
+        "purpose": "17px desktop and 16px mobile, with 1.65 line height."
+      },
+      "label": {
+        "displayName": "Recap label",
+        "purpose": "14px recap controls; local metadata retains component-specific sizing."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "control-color",
+        "value": "160ms",
+        "purpose": "Navigation color and primary action background."
+      },
+      {
+        "name": "recap-chevron",
+        "value": "180ms",
+        "purpose": "Chevron rotation on native recap disclosure."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "intermediate-max",
+        "value": "1000px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "767px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary join action",
+      "kind": "button",
+      "description": "Pale blue community action.",
+      "html": "<a class=\"ds-primary\" href=\"#community\">Join our community</a>",
+      "css": "@font-face{font-family:'Archivo';font-style:normal;font-weight:400 700;font-stretch:90%;font-display:swap;src:url(/fonts/archivo-latin.woff2) format('woff2')}@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/source-sans-3-latin.woff2) format('woff2')}.ds-primary{font-family:'Source Sans 3',Arial,sans-serif;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 15px;background:var(--action,#b9d1f6);border:1px solid #b9d1f6;border-radius:4px;color:var(--action-ink,#17263b);font-size:15px;font-weight:600;text-decoration:none;transition:background 160ms}.ds-primary:hover{background:var(--action-hover,#d6e5fc)}.ds-primary:focus-visible{outline:2px solid var(--focus,#c3d8fb);outline-offset:5px;}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Secondary action",
+      "kind": "button",
+      "description": "Quiet text destination.",
+      "html": "<a class=\"ds-secondary\" href=\"#events\">Explore events</a>",
+      "css": "@font-face{font-family:'Archivo';font-style:normal;font-weight:400 700;font-stretch:90%;font-display:swap;src:url(/fonts/archivo-latin.woff2) format('woff2')}@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/source-sans-3-latin.woff2) format('woff2')}.ds-secondary{font-family:'Source Sans 3',Arial,sans-serif;display:inline-flex;align-items:center;min-height:44px;color:#dce6f5;font-size:15px;text-decoration:none}.ds-secondary:hover{color:var(--link,#b1ccf8);text-decoration:underline}.ds-secondary:focus-visible{outline:2px solid var(--focus,#c3d8fb);outline-offset:5px;}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}"
+    },
+    {
+      "name": "Speaker search",
+      "kind": "input",
+      "description": "Readable directory search.",
+      "html": "<input class=\"ds-search\" type=\"search\" aria-label=\"Search speakers\" placeholder=\"Search speakers...\">",
+      "css": "@font-face{font-family:'Archivo';font-style:normal;font-weight:400 700;font-stretch:90%;font-display:swap;src:url(/fonts/archivo-latin.woff2) format('woff2')}@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/source-sans-3-latin.woff2) format('woff2')}.ds-search{font-family:'Source Sans 3',Arial,sans-serif;width:100%;min-height:44px;padding:10px 40px 10px 13px;border:1px solid #63748b;border-radius:4px;background:#17212d;color:var(--ink,#f0f2f5);font-size:13px}.ds-search::placeholder{color:#b2bdcd}.ds-search:focus-visible{outline:2px solid var(--focus,#c3d8fb);outline-offset:5px;}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}",
+      "refersTo": "speaker-search"
+    },
+    {
+      "name": "Section navigation",
+      "kind": "nav",
+      "description": "Compact header section links.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Chapter sections\"><a href=\"#speakers\">Speakers</a><a href=\"#leadership\">Team</a><a href=\"#events\">Events</a></nav>",
+      "css": "@font-face{font-family:'Archivo';font-style:normal;font-weight:400 700;font-stretch:90%;font-display:swap;src:url(/fonts/archivo-latin.woff2) format('woff2')}@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/source-sans-3-latin.woff2) format('woff2')}.ds-nav{font-family:'Source Sans 3',Arial,sans-serif;display:flex;align-items:center;gap:28px}.ds-nav a{display:flex;align-items:center;min-height:44px;color:#c6ced9;font-size:15px;text-decoration:none;transition:color 160ms}.ds-nav a:hover{color:#fff}.ds-nav a:focus-visible{outline:2px solid var(--focus,#c3d8fb);outline-offset:5px;}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}"
+    },
+    {
+      "name": "Archive year filter",
+      "kind": "chip",
+      "description": "Small selected archive control.",
+      "html": "<button class=\"ds-year\" aria-pressed=\"true\">2025\u20132026</button>",
+      "css": "@font-face{font-family:'Archivo';font-style:normal;font-weight:400 700;font-stretch:90%;font-display:swap;src:url(/fonts/archivo-latin.woff2) format('woff2')}@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/source-sans-3-latin.woff2) format('woff2')}.ds-year{font-family:'Source Sans 3',Arial,sans-serif;border:1px solid #586a83;border-radius:4px;padding:6px 14px;min-height:38px;font-size:12px;background:transparent;color:var(--muted,#bdc5d0);cursor:pointer}.ds-year[aria-pressed=true]{background:#c0d4f3;color:#17263b;border-color:#c0d4f3}.ds-year:focus-visible{outline:2px solid var(--focus,#c3d8fb);outline-offset:5px;}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}",
+      "refersTo": "year-filter"
+    },
+    {
+      "name": "Story recap",
+      "kind": "custom",
+      "description": "Native expandable full recap beneath an existing chapter photograph.",
+      "html": "<details class=\"ds-recap\"><summary>Read the recap <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></summary><p>Existing chapter recap text.</p></details>",
+      "css": "@font-face{font-family:'Archivo';font-style:normal;font-weight:400 700;font-stretch:90%;font-display:swap;src:url(/fonts/archivo-latin.woff2) format('woff2')}@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/source-sans-3-latin.woff2) format('woff2')}.ds-recap{font-family:'Source Sans 3',Arial,sans-serif;}.ds-recap summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:36px;padding:5px 0;color:var(--link,#b1ccf8);font-size:14px;list-style:none;border-bottom:1px solid var(--line,#344252);cursor:pointer}.ds-recap summary::-webkit-details-marker{display:none}.ds-recap summary svg{transition:transform 180ms}.ds-recap[open] summary svg{transform:rotate(180deg)}.ds-recap summary:focus-visible{outline:2px solid var(--focus,#c3d8fb);outline-offset:5px;}.ds-recap p{color:var(--muted,#bdc5d0);font-size:15px;line-height:1.7;margin-top:14px}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}",
+      "refersTo": "recap-summary"
+    },
+    {
+      "name": "Event archive panel",
+      "kind": "card",
+      "description": "Subtle contained supporting callout.",
+      "html": "<aside class=\"ds-archive\"><h3>Event Archive</h3><p>Browse chapter workshops, speakers, and hackathons.</p><a href=\"#archive\">View Past Events</a></aside>",
+      "css": "@font-face{font-family:'Archivo';font-style:normal;font-weight:400 700;font-stretch:90%;font-display:swap;src:url(/fonts/archivo-latin.woff2) format('woff2')}@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/source-sans-3-latin.woff2) format('woff2')}.ds-archive{font-family:'Source Sans 3',Arial,sans-serif;padding:22px 24px;background:var(--panel,#19232f);border:1px solid var(--line,#344252);color:var(--ink,#f0f2f5)}.ds-archive h3{font-size:18px;margin:0 0 8px}.ds-archive p{font-size:13px;color:var(--muted,#bdc5d0)}.ds-archive a{display:inline-block;font-size:12px;padding:9px 14px;border:1px solid #667e9f;border-radius:4px;color:var(--link,#b1ccf8);text-decoration:none}.ds-archive a:hover{background:#fff;color:#000}.ds-archive a:focus-visible{outline:2px solid var(--focus,#c3d8fb);outline-offset:5px;}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}"
+    },
+    {
+      "name": "Chapter typography",
+      "kind": "custom",
+      "description": "Archivo white display slogan above Source Sans 3 supporting copy.",
+      "html": "<div class=\"ds-type\"><h1>Ever Better.<br>Ever Bolder.</h1><p>We bridge the gap between theory and practice.</p></div>",
+      "css": "@font-face{font-family:'Archivo';font-style:normal;font-weight:400 700;font-stretch:90%;font-display:swap;src:url(/fonts/archivo-latin.woff2) format('woff2')}@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/source-sans-3-latin.woff2) format('woff2')}.ds-type h1{font-family:'Archivo',Arial,sans-serif;font-stretch:90%;font-size:clamp(44px,4.25vw,58px);font-weight:450;line-height:1.06;letter-spacing:-.025em;color:#f4f5f7;margin:0 0 22px;text-wrap:balance}.ds-type p{font-family:'Source Sans 3',Arial,sans-serif;font-size:17px;line-height:1.65;color:var(--muted,#bdc5d0);max-width:46ch;text-wrap:pretty}@media(max-width:1000px){.ds-type h1{font-size:48px}}@media(max-width:767px){.ds-type p{font-size:16px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Rochester Student Community",
+    "overview": "A recognizable Rochester student community built around real people, real events, and chapter history. The restrained navy canvas and pale blue actions support photographs and readable descriptions. Compact lists remain useful, while the restored GDSC logo and open sections carry the identity instead of literal social-network styling.",
+    "keyCharacteristics": [
+      "Restrained navy canvas and pale blue actions",
+      "Original GDSC identity and existing chapter photography",
+      "Readable sans-serif hierarchy with compact speaker rows",
+      "Quiet solid rules and native expandable recaps"
+    ],
+    "rules": [],
+    "dos": [
+      "Do use real chapter photography and recognizable GDSC branding.",
+      "Do use quiet rules to organize open sections on the navy canvas.",
+      "Do preserve complete recap text inside native expandable disclosures.",
+      "Do retain visible keyboard focus, responsive layouts, and reduced-motion support.",
+      "Do preserve featured speakers, highlights, current leadership, and archived boards."
+    ],
+    "donts": [
+      "Don't reinstate the bracketed Facebook-style wordmark, directory sidebar, or blue section bars as current system patterns.",
+      "Don't invent social activity or account features to imply a social network.",
+      "Don't hide the leadership archive or replace existing chapter history when extending the site."
+    ]
+  }
+}

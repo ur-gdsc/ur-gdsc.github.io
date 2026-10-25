@@ -5,30 +5,30 @@ import { ImageWithFallback } from './ImageWithFallback';
 import { Leader } from '../types';
 
 const LeaderCard: React.FC<{ leader: Leader }> = ({ leader }) => (
-    <div className="group w-[calc(50%-0.75rem)] sm:w-[calc(33.333%-1rem)] lg:w-[calc(25%-1.125rem)] xl:w-[200px]">
-        <div className="aspect-square overflow-hidden rounded-full mb-5 ring-1 ring-border group-hover:ring-2 group-hover:ring-white/40 transition-all relative shadow-lg">
+    <div className="leader-card">
+        <div className="leader-photo">
             {leader.image ? (
                 <ImageWithFallback
                     src={leader.image}
                     alt={leader.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover"
                 />
             ) : (
-                <div className="flex h-full w-full items-center justify-center bg-midnight-800 text-gray-500">
+                <div className="flex h-full w-full items-center justify-center bg-surface text-muted">
                     <User className="w-1/3 h-1/3 opacity-50" aria-hidden="true" />
                     <span className="sr-only">{leader.name} photo coming soon</span>
                 </div>
             )}
         </div>
-        <div className="text-center">
-            <h4 className="font-semibold text-lg text-white mb-1 leading-tight">{leader.name}</h4>
-            <p className="text-[11px] text-gray-500 uppercase tracking-[0.15em]">{leader.role}</p>
+        <div className="leader-details">
+            <h3 className="leader-name">{leader.name}</h3>
+            <p className="text-xs text-muted leading-relaxed">{leader.role}</p>
         </div>
     </div>
 );
 
 const LeaderGrid: React.FC<{ leaders: Leader[] }> = ({ leaders }) => (
-    <div className="flex flex-wrap justify-center gap-x-6 gap-y-12 max-w-6xl mx-auto">
+    <div className="leader-grid">
         {leaders.map((leader) => (
             <LeaderCard key={leader.id} leader={leader} />
         ))}
@@ -44,35 +44,38 @@ const Leadership: React.FC = () => {
         : LEADERS.filter(l => l.year === yearFilter);
 
     return (
-        <section id="leadership" className="py-32 bg-paper border-b border-border relative">
-            <div className="container max-w-[1400px] mx-auto px-6">
-                <div className="mb-20 text-center max-w-2xl mx-auto">
-                    <span className="text-xs text-gray-500 uppercase tracking-widest mb-4 block">2026-2027 Eboard</span>
-                    <h2 className="text-4xl font-semibold text-white mb-6">Leadership</h2>
-                    <p className="text-gray-400 font-light leading-relaxed">
+        <section id="leadership" className="site-section bg-paper border-b border-border relative">
+            <div className="site-container">
+                <div className="leadership-intro">
+
+                    <h2 className="section-heading">Leadership</h2>
+                    <p className="board-year">2026–2027 Eboard</p>
+                    <p className="text-gray-400 font-normal leading-relaxed">
                         Meet the current executive board guiding GDSC at Rochester this year.
                     </p>
                 </div>
 
                 <LeaderGrid leaders={CURRENT_LEADERS} />
 
-                <div className="mt-32 mb-20 text-center max-w-2xl mx-auto">
-                    <span className="text-xs text-gray-500 uppercase tracking-widest mb-4 block">Previous Eboards</span>
-                    <h2 className="text-4xl font-semibold text-white mb-6">Leadership Archive</h2>
-                    <p className="text-gray-400 font-light leading-relaxed">
+                <div className="archive-block">
+                <div className="leadership-intro">
+
+                    <h2 className="section-heading">Leadership Archive</h2>
+                    <p className="text-gray-400 font-normal leading-relaxed">
                         Honoring the executive boards that helped shape GDSC at Rochester, organize events, build community, and drive innovation on campus.
                     </p>
                 </div>
 
-                <div className="flex flex-wrap justify-center gap-6 mb-16">
+                <div className="year-filters">
                     {years.map(year => (
                         <button
                             key={year}
+                            aria-pressed={yearFilter === year}
                             onClick={() => setYearFilter(year)}
                             className={`text-sm uppercase tracking-wider py-2 border-b transition-all ${
                                 yearFilter === year
                                     ? 'text-white border-white'
-                                    : 'text-gray-600 border-transparent hover:text-gray-400'
+                                    : 'text-muted border-transparent hover:text-gray-400'
                             }`}
                         >
                             {year}
@@ -81,6 +84,7 @@ const Leadership: React.FC = () => {
                 </div>
 
                 <LeaderGrid leaders={filteredLeaders} />
+                </div>
             </div>
         </section>
     );

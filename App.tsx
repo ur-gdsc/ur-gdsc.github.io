@@ -10,16 +10,19 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
     return (
-        <div className="min-h-screen bg-midnight-950 text-white selection:bg-google-blue selection:text-white">
+        <div className="min-h-screen bg-paper text-white selection:bg-google-blue selection:text-white">
+            <a className="skip-link" href="#main-content">Skip to content</a>
             <Navbar />
-            <main>
+            <div className="page-layout">
+            <main id="main-content" tabIndex={-1}>
                 <Hero />
+                <Highlights />
                 <Speakers />
                 <Leadership />
                 <Events />
-                <Highlights />
                 <About />
             </main>
+            </div>
             <Footer />
         </div>
     );

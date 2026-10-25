@@ -4,15 +4,15 @@ import { EVENTS } from '../constants';
 
 const Events: React.FC = () => {
     return (
-        <section id="events" className="py-32 bg-paper border-b border-border">
-            <div className="container max-w-[1400px] mx-auto px-6">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-20 pb-6 border-b border-border">
+        <section id="events" className="site-section bg-paper border-b border-border">
+            <div className="site-container">
+                <div className="directory-section-header">
                     <div>
-                        <span className="text-xs text-gray-500 uppercase tracking-widest mb-4 block">What's Happening</span>
-                        <h2 className="text-4xl font-semibold text-white mb-4">
+
+                        <h2 className="section-heading">
                             Events & Workshops
                         </h2>
-                        <p className="text-gray-400 font-light leading-relaxed max-w-2xl">
+                        <p className="text-gray-400 font-normal leading-relaxed max-w-2xl">
                             From beginner-friendly introductions to advanced technical deep dives, our events bring together students, faculty, and industry experts to learn, build, and innovate.
                         </p>
                     </div>
@@ -21,21 +21,21 @@ const Events: React.FC = () => {
                     </a>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:divide-x divide-border border-b border-border">
-                    {EVENTS.map((event, index) => (
-                        <div key={event.id} className="group p-10 hover:bg-surface transition-colors relative">
-                            <div className="text-xs text-gray-600 mb-8">0{index + 1}</div>
-                            <h3 className="font-semibold text-3xl text-white mb-6 group-hover:translate-x-2 transition-transform duration-300">
+                <div className="event-list">
+                    {EVENTS.map((event) => (
+                        <div key={event.id} className="event-row">
+
+                            <h3 className="event-title">
                                 {event.title}
                             </h3>
-                            <p className="text-gray-400 font-light leading-relaxed mb-10 min-h-[80px]">
+                            <p className="event-description">
                                 {event.description}
                             </p>
-                            
+
                             {event.link && (
-                                <a 
-                                    href={event.link} 
-                                    target="_blank" 
+                                <a
+                                    href={event.link}
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 text-xs uppercase tracking-wide text-google-blue hover:text-white transition-colors"
                                 >
@@ -45,11 +45,11 @@ const Events: React.FC = () => {
                         </div>
                     ))}
                 </div>
-                
-                <div className="mt-12 p-8 border border-border text-center">
+
+                <div className="event-archive">
                     <h3 className="font-semibold text-2xl text-white mb-2">Event Archive</h3>
-                    <p className="text-gray-500 font-light mb-6">Browse our history of technical workshops, guest speaker sessions, and collaborative hackathons.</p>
-                    <div className="text-xs text-gray-600 italic mb-6">Note: Sign in required to view event details and photos</div>
+                    <p className="text-muted font-normal mb-6">Browse our history of technical workshops, guest speaker sessions, and collaborative hackathons.</p>
+                    <div className="text-xs text-muted italic mb-6">Note: Sign in required to view event details and photos</div>
                     <a href="https://ccc.rochester.edu/events?show=past&group_ids=30850" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-3 border border-white text-white hover:bg-white hover:text-black transition-all text-xs uppercase tracking-wide">
                         View Past Events
                     </a>
