@@ -106,7 +106,7 @@ export const CURRENT_LEADERS: Leader[] = [
     { id: 'curr-vp1', name: 'Earvin Chen', role: 'Vice President', image: '/earvin2.jpg', year: '2026-2027' },
     { id: 'curr-evt1', name: 'Serena Chen', role: 'Events Manager', image: '/serena2.jpg', year: '2026-2027' },
     { id: 'curr-sec1', name: 'Danica Kim', role: 'Secretary', image: '/danica2.jpg', year: '2026-2027' },
-    { id: 'curr-bus1', name: 'Minh Pham', role: 'Business Manager', image: '/minh2.pdf', year: '2026-2027' },
+    { id: 'curr-bus1', name: 'Minh Pham', role: 'Business Manager', image: '/minh2.png', year: '2026-2027' },
     { id: 'curr-mkt1', name: 'Hailey Wong-Budiman', role: 'Marketing Lead', image: '/hailey2.png', year: '2026-2027' },
     { id: 'curr-tech1', name: 'Henry Shen', role: 'Tech Lead', image: '/henry.jpg', year: '2026-2027' },
     { id: 'curr-tech2', name: 'Anh Nguyen', role: 'Tech Lead', image: '/anh.jpg', year: '2026-2027' },
