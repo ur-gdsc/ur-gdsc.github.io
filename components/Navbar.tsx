@@ -4,7 +4,7 @@ import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 const navLinks = [
     { name: 'Speakers', href: '#speakers' },
-    { name: 'Team', href: '#leadership' },
+    { name: 'Leadership', href: '#leadership' },
     { name: 'Events', href: '#events' },
     { name: 'Highlights', href: '#highlights' },
     { name: 'Mission', href: '#about' },
@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
                 toggle.current?.focus();
             }
         };
-        const closeOnResize = () => { if (window.innerWidth >= 768) setIsMobileOpen(false); };
+        const closeOnResize = () => { if (window.innerWidth >= 950) setIsMobileOpen(false); };
         window.addEventListener('keydown', closeOnEscape);
         window.addEventListener('resize', closeOnResize);
         return () => {
@@ -36,11 +36,11 @@ const Navbar: React.FC = () => {
             <nav aria-label="Main navigation" className="masthead-inner">
                 <a href="#home" className="wordmark" onClick={() => setIsMobileOpen(false)}>
                     <img src={assetPath('/google-developers-seeklogo.svg')} alt="" width="44" height="24" />
-                    <span className="wordmark-name">GDSC <span>Rochester</span></span>
+                    <span className="wordmark-name">Google Developer Student Club<span>University of Rochester</span></span>
                 </a>
                 <div className="desktop-navigation">
                     {navLinks.map(link => <a key={link.name} href={link.href} className="nav-link">{link.name}</a>)}
-                    <a href="https://www.instagram.com/gdsc.uofr/" target="_blank" rel="noopener noreferrer" className="join-link">Join us <ArrowUpRight className="w-4 h-4" aria-hidden="true" /></a>
+                    <a href="https://www.instagram.com/gdsc.uofr/" target="_blank" rel="noopener noreferrer" className="join-link">Join us <ArrowUpRight size={17} aria-hidden="true" /></a>
                 </div>
                 <button ref={toggle} className="menu-toggle" aria-label={isMobileOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={isMobileOpen} aria-controls="mobile-navigation" onClick={() => setIsMobileOpen(!isMobileOpen)}>
                     {isMobileOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
             </nav>
             {isMobileOpen && <nav id="mobile-navigation" aria-label="Mobile navigation" className="mobile-navigation">
                 {navLinks.map(link => <a key={link.name} href={link.href} onClick={() => setIsMobileOpen(false)}>{link.name}</a>)}
-                <a href="https://www.instagram.com/gdsc.uofr/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileOpen(false)}>Join us <ArrowUpRight className="w-4 h-4" aria-hidden="true" /></a>
+                <a href="https://www.instagram.com/gdsc.uofr/" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileOpen(false)}>Join us <ArrowUpRight size={17} aria-hidden="true" /></a>
             </nav>}
         </header>
     );

@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
     return (
-        <div className="min-h-screen bg-paper text-white selection:bg-google-blue selection:text-white">
+        <div className="site-shell">
             <a className="skip-link" href="#main-content">Skip to content</a>
             <Navbar />
             <div className="page-layout">

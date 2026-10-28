@@ -1,6 +1,5 @@
 import { assetPath } from '../utils/assetPath';
 import React, { useState } from 'react';
-import { User } from 'lucide-react';
 
 interface Props {
     src: string;
@@ -13,8 +12,8 @@ export const ImageWithFallback: React.FC<Props> = ({ src, alt, className }) => {
 
     if (error) {
         return (
-            <div role="img" aria-label={`${alt} — photo unavailable`} className={`flex items-center justify-center bg-surface text-gray-500 ${className}`}>
-                <User className="w-1/3 h-1/3 opacity-50" />
+            <div role="img" aria-label={`${alt} — photo unavailable`} className={`portrait-fallback ${className ?? ''}`}>
+                <span aria-hidden="true">{alt.split(' ').map(part => part[0]).slice(0, 2).join('')}</span>
             </div>
         );
     }
@@ -26,6 +25,8 @@ export const ImageWithFallback: React.FC<Props> = ({ src, alt, className }) => {
             className={className}
             onError={() => setError(true)}
             loading="lazy"
+            width="600"
+            height="600"
         />
     );
 };

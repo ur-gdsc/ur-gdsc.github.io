@@ -1,3 +1,8 @@
+export interface ContentSource {
+    title: string;
+    url: string;
+}
+
 export interface Speaker {
     id: string;
     name: string;
@@ -5,6 +10,7 @@ export interface Speaker {
     image: string;
     company?: string;
     companyLogo?: string;
+    sources?: ContentSource[];
 }
 
 export interface Leader {
@@ -28,6 +34,7 @@ export interface Alumni {
     name: string;
     role: string;
     image: string;
+    sources?: ContentSource[];
 }
 
 export interface UpcomingSpeaker {

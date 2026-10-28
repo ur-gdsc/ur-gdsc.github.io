@@ -1,62 +1,11 @@
 import React from 'react';
+import ContentSources from './ContentSources';
 import { ALUMNI, FEATURES } from '../constants';
 import { ImageWithFallback } from './ImageWithFallback';
-
-const About: React.FC = () => {
-    return (
-        <section id="about" className="site-section bg-paper">
-            <div className="site-container">
-                <div className="about-layout">
-                    {/* Left Column: Manifesto */}
-                    <div className="about-copy">
-                        <div>
-
-                            <h2 className="section-heading">
-                                Where Innovation Meets Tradition
-                            </h2>
-                        </div>
-                        <div className="prose prose-invert prose-lg text-gray-400 font-normal leading-relaxed">
-                            <p>
-                                At the University of Rochester, home to computer science pioneers like Richard Rashid (former Microsoft Research SVP), Avie Tevanian (former Apple CTO), and renowned cryptographer Bruce Schneier, we're continuing a legacy of technological excellence.
-                            </p>
-                        </div>
-
-                        <div className="alumni-section">
-                            <h3 className="alumni-heading">Notable UR alumni in tech</h3>
-                            <div className="space-y-8">
-                                {ALUMNI.map((alum) => (
-                                    <div key={alum.name} className="flex items-center gap-6 group">
-                                        <div className="w-12 h-12 shrink-0 rounded-full overflow-hidden border border-border grayscale group-hover:grayscale-0 transition-all">
-                                            <ImageWithFallback src={alum.image} alt={alum.name} className="w-full h-full object-cover" />
-                                        </div>
-                                        <div>
-                                            <div className="font-semibold text-lg text-white">{alum.name}</div>
-                                            <div className="text-xs text-muted leading-relaxed max-w-xs">{alum.role}</div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Right Column: Features Grid */}
-                    <div className="about-features">
-                        <div className="feature-list">
-                            {FEATURES.map((f) => (
-                                <div key={f.number} className="feature-item">
-
-                                    <div>
-                                        <h3 className="font-semibold text-xl text-white mb-4">{f.title}</h3>
-                                        <p className="text-gray-400 font-normal text-sm leading-relaxed">{f.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-};
-
+const About: React.FC = () => <section id="about" className="site-section">
+    <div className="section-intro"><h2 className="section-heading">Innovation Meets Tradition</h2><p>Rochester alumni include Microsoft Research founder Richard Rashid, former Apple software executive Avie Tevanian, and security technologist Bruce Schneier. Our chapter brings students together to learn and build.</p></div>
+    <div className="about-layout"><div className="alumni-section"><h3>Notable UR alumni in tech</h3>{ALUMNI.map(alum => <article key={alum.name} className="alumni-row"><ImageWithFallback src={alum.image} alt={alum.name} /><div><h4>{alum.name}</h4><p>{alum.role}</p><ContentSources sources={alum.sources} /></div></article>)}</div>
+    <div className="feature-list">{FEATURES.map(f => <article key={f.number}><h3>{f.title}</h3><p>{f.desc}</p></article>)}</div></div>
+    <ContentSources sources={[{ title: "Chapter LinkedIn", url: "https://www.linkedin.com/company/gdg-uofr" }, { title: "University club listing", url: "https://ccc.rochester.edu/club_signup?club_url=ucc&view=all" }, { title: "Google Developer Community", url: "https://developers.google.com/community" }]} />
+</section>;
 export default About;

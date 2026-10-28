@@ -3,52 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#13171d">
+    <meta name="description" content="Google Developer Student Club at the University of Rochester. Meet our community, explore workshops and speakers, and build something together.">
     <title>GDSC · University of Rochester</title>
     <link rel="icon" type="image/svg+xml" href="/google-developers-seeklogo.svg">
-    <link rel="preload" href="/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Source Sans 3', 'Arial', 'sans-serif'],
-                        serif: ['Source Serif 4', 'Georgia', 'serif'],
-                        mono: ['IBM Plex Mono', 'monospace'],
-                    },
-                    colors: {
-                        paper: '#111820', // Deep charcoal, almost black but warmer
-                        surface: '#19232f',
-                        border: '#344252',
-                        google: {
-                            blue: '#4285F4',
-                            red: '#EA4335',
-                            yellow: '#FBBC04',
-                            green: '#34A853',
-                        }
-                    },
-
-                }
-            }
-        }
-    </script>
-
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
-  }
-}
-</script>
+    <link rel="preload" href="/fonts/google-sans-flex-400.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/fonts/google-sans-flex-500.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="/index.css">
 </head>
-<body class="bg-paper text-gray-200 antialiased overflow-x-hidden">
-    <div id="root" class="relative z-10"></div>
+<body>
+    <div id="root"></div>
 <script type="module" src="/index.tsx"></script>
 </body>
 </html>

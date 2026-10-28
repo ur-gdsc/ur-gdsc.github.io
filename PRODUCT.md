@@ -21,3 +21,7 @@ Keep the GDSC identity and club history. The user requested a cooler visual dire
 ## Evidence on Hand
 
 AGENTS.md, constants.ts, public chapter imagery, and the existing component copy. Do not invent events, membership counts, activity, or social features.
+
+## Content accuracy
+
+Public biographical and company claims were reviewed October 27, 2026; see FACT_CHECK.md for evidence, corrections, and verification limits. Keep source links with biographies and recaps. Date and attribute funding/user/partner milestones; distinguish later company updates from event-time context. Do not promise cloud credits, weekly schedules, specific-company mentorship, or current competition eligibility without evidence. The 2026–2027 board remains chapter-supplied; older Google organizer profiles do not supersede it. Private-event claims require chapter confirmation.

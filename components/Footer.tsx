@@ -1,33 +1,9 @@
 import React from 'react';
-
-const Footer: React.FC = () => {
-    return (
-        <footer className="bg-paper py-20 border-t border-border">
-            <div className="site-container text-center">
-                <div className="text-2xl font-medium text-white mb-6 tracking-wide">Meliora</div>
-
-                <a
-                    href="mailto:uofrdsc@gmail.com?cc=krish.jain@rochester.edu,hwongbud@u.rochester.edu&subject=GDSC%20Rochester%20Inquiry"
-                    className="group inline-flex flex-wrap justify-center items-center gap-x-3 gap-y-1 px-6 py-3 mb-10 rounded-full border border-white/20 hover:bg-white hover:text-black hover:border-white transition-all text-sm tracking-wide"
-                >
-                    <span>Get in Touch</span>
-                    <span className="text-gray-400 group-hover:text-black group-focus-visible:text-black">uofrdsc@gmail.com</span>
-                </a>
-
-                <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-12">
-                    <a href="#home" className="text-xs text-muted hover:text-white uppercase tracking-wide transition-colors">Home</a>
-                    <a href="#speakers" className="text-xs text-muted hover:text-white uppercase tracking-wide transition-colors">Speakers</a>
-                    <a href="#events" className="text-xs text-muted hover:text-white uppercase tracking-wide transition-colors">Events</a>
-                    <a href="https://www.instagram.com/gdsc.uofr/" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-white uppercase tracking-wide transition-colors">Instagram</a>
-                    <a href="mailto:uofrdsc@gmail.com?cc=krish.jain@rochester.edu,hwongbud@u.rochester.edu" className="text-xs text-muted hover:text-white uppercase tracking-wide transition-colors">Contact</a>
-                </div>
-
-                <div className="text-muted text-[10px] uppercase tracking-wide">
-                    © 2025-2026 GDSC University of Rochester
-                </div>
-            </div>
-        </footer>
-    );
-};
-
+import { assetPath } from '../utils/assetPath';
+import { ArrowUpRight, ArrowUp } from 'lucide-react';
+const Footer: React.FC = () => <footer className="site-footer"><div className="footer-inner">
+    <div className="footer-brand"><img src={assetPath('/google-developers-seeklogo.svg')} alt="" width="52" height="26" /><div className="footer-title">GDSC Rochester<span>Ever Better. Ever Bolder.</span></div></div>
+    <div className="footer-contact"><p>Get in touch.</p><div><a className="text-link" href="mailto:uofrdsc@gmail.com?cc=krish.jain@rochester.edu,hwongbud@u.rochester.edu&subject=GDSC%20Rochester%20Inquiry">uofrdsc@gmail.com <ArrowUpRight size={20} aria-hidden="true" /></a><a className="text-link" href="https://www.instagram.com/gdsc.uofr/" target="_blank" rel="noopener noreferrer">Instagram <ArrowUpRight size={20} aria-hidden="true" /></a></div></div>
+    <div className="footer-bottom"><p>© {new Date().getFullYear()} GDSC · University of Rochester</p><a className="text-link" href="#home">Back to top <ArrowUp size={17} aria-hidden="true" /></a></div>
+</div></footer>;
 export default Footer;
