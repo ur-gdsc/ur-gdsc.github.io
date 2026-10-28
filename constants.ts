@@ -113,31 +113,31 @@ export const SPEAKERS: Speaker[] = [
 export const UPCOMING_SPEAKERS: UpcomingSpeaker[] = [];
 
 export const CURRENT_LEADERS: Leader[] = [
-    { id: 'curr-adv1', name: 'Eric Pope', role: 'Advisor', image: '/eric.jpeg', year: '2026-2027' },
-    { id: 'curr-pres1', name: 'Deniz Deryaoglu', role: 'President', image: '/deniz2.jpg', year: '2026-2027' },
-    { id: 'curr-vp1', name: 'Earvin Chen', role: 'Vice President', image: '/earvin2.jpg', year: '2026-2027' },
-    { id: 'curr-evt1', name: 'Serena Chen', role: 'Events Manager', image: '/serena2.jpg', year: '2026-2027' },
-    { id: 'curr-sec1', name: 'Danica Kim', role: 'Secretary', image: '/danica2.jpg', year: '2026-2027' },
-    { id: 'curr-bus1', name: 'Minh Pham', role: 'Business Manager', image: '/minh2.png', year: '2026-2027' },
-    { id: 'curr-mkt1', name: 'Hailey Wong-Budiman', role: 'Marketing Lead', image: '/hailey2.png', year: '2026-2027' },
-    { id: 'curr-tech1', name: 'Henry Shen', role: 'Tech Lead', image: '/henry.jpg', year: '2026-2027' },
-    { id: 'curr-tech2', name: 'Anh Nguyen', role: 'Tech Lead', image: '/anh.jpg', year: '2026-2027' },
-    { id: 'curr-tech3', name: 'Jeff Munkondya', role: 'Tech Lead', image: '/jeff.png', year: '2026-2027' },
+    { id: 'curr-adv1', name: 'Eric Pope', linkedin: 'https://www.linkedin.com/in/eric-pope-profile/', role: 'Advisor', image: '/eric.jpeg', year: '2026-2027' },
+    { id: 'curr-pres1', name: 'Deniz Deryaoglu', linkedin: 'https://www.linkedin.com/in/deniz-deryaoglu/', role: 'President', image: '/deniz2.jpg', year: '2026-2027' },
+    { id: 'curr-vp1', name: 'Earvin Chen', linkedin: 'https://www.linkedin.com/in/earvin-chen/', role: 'Vice President', image: '/earvin2.jpg', year: '2026-2027' },
+    { id: 'curr-evt1', name: 'Serena Chen', linkedin: 'https://www.linkedin.com/in/serenac0210/', role: 'Events Manager', image: '/serena2.jpg', year: '2026-2027' },
+    { id: 'curr-sec1', name: 'Danica Kim', linkedin: 'https://www.linkedin.com/in/danica-kim/', role: 'Secretary', image: '/danica2.jpg', year: '2026-2027' },
+    { id: 'curr-bus1', name: 'Minh Pham', linkedin: 'https://www.linkedin.com/in/minh-pham-9804982bb/', role: 'Business Manager', image: '/minh2.png', year: '2026-2027' },
+    { id: 'curr-mkt1', name: 'Hailey Wong-Budiman', linkedin: 'https://www.linkedin.com/in/haileylwb/', role: 'Marketing Lead', image: '/hailey2.png', year: '2026-2027' },
+    { id: 'curr-tech1', name: 'Henry Shen', linkedin: 'https://www.linkedin.com/in/henry-shen-139892385/', role: 'Tech Lead', image: '/henry.jpg', year: '2026-2027' },
+    { id: 'curr-tech2', name: 'Anh Nguyen', linkedin: 'https://www.linkedin.com/in/nguyen-anh-1dior/', role: 'Tech Lead', image: '/anh.jpg', year: '2026-2027' },
+    { id: 'curr-tech3', name: 'Jeff Munkondya', linkedin: 'https://www.linkedin.com/in/jeff-munkondya/', role: 'Tech Lead', image: '/jeff.png', year: '2026-2027' },
 ];
 
 export const LEADERS: Leader[] = [
-    { id: 'adv1', name: 'Eric Pope', role: 'Advisor', image: '/eric.jpeg', year: '2025-2026' },
-    { id: 'pres1', name: 'Hailey Wong-Budiman', role: 'President', image: '/hailey.png', year: '2025-2026' },
-    { id: 'vp1', name: 'Krish Jain', role: 'Vice President', image: '/krish.jpg', year: '2025-2026' },
-    { id: 'sec1', name: 'Deniz Deryaoglu', role: 'Secretary', image: '/deniz.jpg', year: '2025-2026' },
-    { id: 'bus1', name: 'Minh Pham', role: 'Business Manager', image: '/minh.jpeg', year: '2025-2026' },
-    { id: 'evt1', name: 'Lucy Jijo', role: 'Events Manager', image: '/lucy.jpeg', year: '2025-2026' },
-    { id: 'tech1', name: 'Rory Brennan-Jones', role: 'Technical Lead', image: '/rory.jpeg', year: '2025-2026' },
-    { id: 'tech2', name: 'Danica Kim', role: 'Technical Lead', image: '/danica.jpg', year: '2025-2026' },
-    { id: 'mkt1', name: 'Xintong Lin', role: 'Marketing Lead', image: '/xintong.jpeg', year: '2025-2026' },
-    { id: 'tech3', name: 'Abigail Briones Aranda', role: 'Technical Lead', image: '/abigail.jpg', year: '2025-2026' },
-    { id: 'tech4', name: 'Serena Chen', role: 'Technical Lead', image: '/serena.jpeg', year: '2025-2026' },
-    { id: 'tech5', name: 'Earvin Chen', role: 'Technical Lead', image: '/earvin.jpg', year: '2025-2026' },
+    { id: 'adv1', name: 'Eric Pope', linkedin: 'https://www.linkedin.com/in/eric-pope-profile/', role: 'Advisor', image: '/eric.jpeg', year: '2025-2026' },
+    { id: 'pres1', name: 'Hailey Wong-Budiman', linkedin: 'https://www.linkedin.com/in/haileylwb/', role: 'President', image: '/hailey.png', year: '2025-2026' },
+    { id: 'vp1', name: 'Krish Jain', linkedin: 'https://www.linkedin.com/in/krishjainx/', role: 'Vice President', image: '/krish.jpg', year: '2025-2026' },
+    { id: 'sec1', name: 'Deniz Deryaoglu', linkedin: 'https://www.linkedin.com/in/deniz-deryaoglu/', role: 'Secretary', image: '/deniz.jpg', year: '2025-2026' },
+    { id: 'bus1', name: 'Minh Pham', linkedin: 'https://www.linkedin.com/in/minh-pham-9804982bb/', role: 'Business Manager', image: '/minh.jpeg', year: '2025-2026' },
+    { id: 'evt1', name: 'Lucy Jijo', linkedin: 'https://www.linkedin.com/in/lucy-jijo/', role: 'Events Manager', image: '/lucy.jpeg', year: '2025-2026' },
+    { id: 'tech1', name: 'Rory Brennan-Jones', linkedin: 'https://www.linkedin.com/in/rory-aigas-jones/', role: 'Technical Lead', image: '/rory.jpeg', year: '2025-2026' },
+    { id: 'tech2', name: 'Danica Kim', linkedin: 'https://www.linkedin.com/in/danica-kim/', role: 'Technical Lead', image: '/danica.jpg', year: '2025-2026' },
+    { id: 'mkt1', name: 'Xintong Lin', linkedin: 'https://www.linkedin.com/in/xintonglinnn/', role: 'Marketing Lead', image: '/xintong.jpeg', year: '2025-2026' },
+    { id: 'tech3', name: 'Abigail Briones Aranda', linkedin: 'https://www.linkedin.com/in/abigailbrionesaranda/', role: 'Technical Lead', image: '/abigail.jpg', year: '2025-2026' },
+    { id: 'tech4', name: 'Serena Chen', linkedin: 'https://www.linkedin.com/in/serenac0210/', role: 'Technical Lead', image: '/serena.jpeg', year: '2025-2026' },
+    { id: 'tech5', name: 'Earvin Chen', linkedin: 'https://www.linkedin.com/in/earvin-chen/', role: 'Technical Lead', image: '/earvin.jpg', year: '2025-2026' },
 ];
 
 export const EVENTS: Event[] = [

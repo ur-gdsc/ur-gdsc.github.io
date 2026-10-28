@@ -8,7 +8,7 @@ const files = ['constants.ts', ...(await readdir('components'))
 const urls = new Set();
 for (const file of files) {
   const source = await readFile(file, 'utf8');
-  for (const match of source.matchAll(/\b(?:href|url|link)["']?\s*[=:]\s*["'](https:\/\/[^"']+)["']/g)) {
+  for (const match of source.matchAll(/\b(?:href|url|link|linkedin)["']?\s*[=:]\s*["'](https:\/\/[^"']+)["']/g)) {
     urls.add(match[1]);
   }
 }

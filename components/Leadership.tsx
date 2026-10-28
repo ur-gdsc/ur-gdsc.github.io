@@ -6,7 +6,7 @@ import { Leader } from '../types';
 const LeaderGrid: React.FC<{ leaders: Leader[] }> = ({ leaders }) => (
     <div className="leader-grid">{leaders.map(leader => <article key={leader.id} className="leader-card">
         <div className="leader-photo">{leader.image ? <ImageWithFallback src={leader.image} alt={leader.name} /> : <div className="portrait-fallback" role="img" aria-label={`${leader.name} — photo unavailable`}>{leader.name.split(' ').map(n => n[0]).slice(0,2).join('')}</div>}</div>
-        <div className="leader-details"><h3>{leader.name}</h3><p>{leader.role}</p></div>
+        <div className="leader-details"><h3>{leader.name}</h3><p>{leader.role}</p>{leader.linkedin && <a className="leader-linkedin" href={leader.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${leader.name} on LinkedIn (opens in a new tab)`}>LinkedIn <span aria-hidden="true">↗</span></a>}</div>
     </article>)}</div>
 );
 const Leadership: React.FC = () => {

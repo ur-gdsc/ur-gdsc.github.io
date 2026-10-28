@@ -14,6 +14,7 @@ export interface Speaker {
 }
 
 export interface Leader {
+    linkedin?: string;
     id: string;
     name: string;
     role: string; // President, Advisor, Technical Lead, etc.

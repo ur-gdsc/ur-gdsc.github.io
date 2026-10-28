@@ -87,3 +87,12 @@ Expanded all 12 speaker bios with specific accomplishments; kept the existing ro
 Live GET checks found two chapter URLs returning 404: the chapter landing page and Ruben’s event page. Replaced public links with the University CCC events listing, chapter LinkedIn, and Ruben’s professional profile. The indexed event biography remains the evidence for Scout AI’s acquisition and Meta contributions; it is no longer presented as a working public destination. Removed the old Rochester Review PDF link, which returned 200 but redirected to a generic magazine landing page rather than the cited feature.
 
 The script `scripts/check-links.mjs` checks rendered external destinations, follows redirects, and records results in `.taste-skill/link-check.json`. HTTP success alone does not verify page content; redirects and password pages require separate inspection. These checks do not send emails or submit registrations.
+
+
+## Leadership LinkedIn profiles — October 27, 2026
+
+Added optional LinkedIn URLs to the leadership data and a visible, accessible link below each role in both current and archived rosters. All 22 roster entries are linked, covering 15 distinct people; repeated people use the same profile in each year.
+
+Profiles were matched using public LinkedIn education/activity and signed-in LinkedIn search with Rochester affiliation. Signed-in search resolved the unindexed Deniz Deryaoglu, Henry Shen, and Eric Pope profiles. Anh Nguyen was distinguished from a Wayfair/RIT namesake using the University of Rochester CS profile. Hailey’s existing public club posts corroborate her identity; Krish’s club speaker announcement corroborates his profile. Public profiles also identify Rochester for Earvin, Serena, Danica, Minh, Jeff, Lucy, Xintong, and Abigail.
+
+The first Rory search result was a sparse profile under his full name with no education details. Asked the user to confirm rather than linking it. The user supplied https://www.linkedin.com/in/rory-aigas-jones/ instead; this is the URL used. No connections, messages, or other social actions were sent. Updated the link checker to include `linkedin` data fields.
