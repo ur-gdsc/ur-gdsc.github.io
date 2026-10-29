@@ -151,7 +151,7 @@ Desktop speaker portraits are 80 × 100px, becoming 64 × 80px on phones. Curren
 
 ### Actions and archive filters
 
-The Google blue join pill has 50px minimum height, 12px 20px padding, weight 500, and an arrow. Hover lightens the fill; active moves it down 2px. Text destinations have 44px minimum height, underline on hover, and a small arrow movement. Header join is a quieter tonal pill. Archive filters use page-colored pills with 44px minimum height; hover uses alternate navy, and selected `aria-pressed` uses blue with dark text. The archive initially shows its first academic year; All exposes every archived entry.
+The Google blue join pill has 50px minimum height, 12px 20px padding, weight 500, and an arrow. Hover lightens the fill; active scales it to 97%. Text destinations have 44px minimum height, underline on hover, and a small arrow movement. Header join is a quieter tonal pill. Archive filters use page-colored pills with 44px minimum height; hover uses alternate navy, and selected `aria-pressed` uses blue with dark text. The archive initially shows its first academic year; All exposes every archived entry.
 
 ### Masthead and search
 
@@ -167,7 +167,7 @@ The footer repeats the existing developer mark with a modest GDSC Rochester labe
 
 ### Keyboard and motion
 
-Focus uses a 2px pale outline offset 5px; the search wrapper also exposes focus-within. A skip link appears on focus. Primary transitions take 180ms, secondary arrows 220ms, and recap chevrons 180ms. Control easing is `cubic-bezier(.16,1,.3,1)`. Motion is limited to hover, press, and disclosure feedback. There are no keyframe, load, scroll, or photo animations and no IntersectionObserver arrival handling. Reduced-motion preference disables transitions and animation.
+Focus uses a 2px pale outline offset 5px; the search wrapper also exposes focus-within. A skip link appears on focus. Primary transitions take 180ms, secondary arrows 220ms, and recap chevrons 180ms. Arrow hover movement is limited to fine pointers with hover support. Join, menu, and archive controls use 120ms press feedback at 97% scale; keyboard focus skips control transitions. The mobile menu scrolls within the available viewport on short screens. Clearing an empty speaker search restores focus to the input; its wrapper supplies a single focus ring. Control easing is `cubic-bezier(.16,1,.3,1)`. Motion is limited to hover, press, and disclosure feedback. There are no keyframe, load, scroll, or photo animations and no IntersectionObserver arrival handling. Reduced-motion preference disables transitions and animation.
 
 ## Do's and Don'ts
 

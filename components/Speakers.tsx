@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Search } from 'lucide-react';
 import ContentSources from './ContentSources';
 import { SPEAKERS, UPCOMING_SPEAKERS } from '../constants';
@@ -6,6 +6,11 @@ import { ImageWithFallback } from './ImageWithFallback';
 
 const Speakers: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState('');
+    const searchInput = useRef<HTMLInputElement>(null);
+    const clearSearch = () => {
+        setSearchTerm('');
+        searchInput.current?.focus();
+    };
     const query = searchTerm.trim().toLowerCase();
     const filteredSpeakers = SPEAKERS.filter(speaker => `${speaker.name} ${speaker.company ?? ''}`.toLowerCase().includes(query));
     return (
@@ -23,7 +28,7 @@ const Speakers: React.FC = () => {
                     <p>Speakers who have joined our chapter’s talks and conversations, in person and online.</p>
                     <label className="search-field"><span className="sr-only">Search speakers by name or company</span>
                         <Search size={19} aria-hidden="true" />
-                        <input type="search" name="speakers" autoComplete="off" aria-controls="speaker-results" placeholder="Search name or company…" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
+                        <input ref={searchInput} type="search" name="speakers" autoComplete="off" aria-controls="speaker-results" placeholder="Search name or company…" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
                     </label>
                 </div>
             </div>
@@ -39,7 +44,7 @@ const Speakers: React.FC = () => {
                 </article>)}
             </div>
             <div role="status" aria-live="polite">
-                {query && (filteredSpeakers.length ? <p className="search-status">{filteredSpeakers.length} {filteredSpeakers.length === 1 ? 'speaker' : 'speakers'} found.</p> : <div className="search-empty"><h3>No speakers found</h3><p>Try another name or company.</p><button className="text-link" onClick={() => setSearchTerm('')}>Clear search</button></div>)}
+                {query && (filteredSpeakers.length ? <p className="search-status">{filteredSpeakers.length} {filteredSpeakers.length === 1 ? 'speaker' : 'speakers'} found.</p> : <div className="search-empty"><h3>No speakers found</h3><p>Try another name or company.</p><button className="text-link" onClick={clearSearch}>Clear search</button></div>)}
             </div>
             <aside className="roster-note">
                 <p><a className="text-link" href="https://ccc.rochester.edu/events?&group_ids=30850" target="_blank" rel="noopener noreferrer">Public chapter events</a></p>
